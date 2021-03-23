@@ -1,0 +1,37 @@
+.contenedor{
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('../../../../../assets/imgs/font2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor:before{
+  content: "";
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(45deg,#52c4df,#ad55c1);
+
+  opacity: 0.7;
+  z-index: -1;
+}
+
+h1{
+  margin-top: 19px;
+  color: rgb(7, 1, 2);
+  font-style: normal;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 38px;
+}

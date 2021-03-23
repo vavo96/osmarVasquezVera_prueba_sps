@@ -1,0 +1,37 @@
+<div class="contenedor">
+  <mat-card class="cardUser">
+    <mat-card-header>
+      <mat-card-title>Create new user</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="formUsr">
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput name="nombre" formControlName="nombre">
+          <mat-error *ngIf="formUsr.controls.nombre.errors">
+            <span>
+                Seleccione un usuario
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-raised-button color="primary" (click)="saveUsr()">
+          Save
+        </button>
+      </mat-card-footer>
+    </form>
+  </mat-card>
+
+  <span class="separador"></span>
+
+  <mat-list class="listUsers">
+    <div mat-subheader>Users</div>
+      <mat-divider></mat-divider>
+    <mat-list-item *ngFor="let user of usrs">
+      <mat-icon mat-list-icon>person</mat-icon>
+      <div mat-line>{{user.nombre}}</div>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>

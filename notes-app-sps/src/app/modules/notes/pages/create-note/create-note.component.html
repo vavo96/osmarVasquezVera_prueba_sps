@@ -1,0 +1,57 @@
+<mat-card class="cardNote">
+  <mat-card-header>
+    <mat-card-title>Create a Note</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="formUsr">
+  <mat-card-content>
+      <mat-form-field appearance="outline" class="inputBlock">
+        <mat-label>Users</mat-label>
+        <mat-select name="idUser" formControlName="idUser">
+          <mat-option *ngFor="let user of usrs" [value]="user._id">
+            {{user.nombre}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="formUsr.controls.idUser.errors">
+            <span>
+                Seleccione un usuario
+            </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="inputBlock">
+        <mat-label>Title</mat-label>
+        <input matInput name="title" formControlName="title">
+        <mat-error *ngIf="formUsr.controls.title.errors">
+          <span>
+            El titulo es obligatorio
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="inputBlock">
+        <mat-label>Content</mat-label>
+        <textarea matInput name="content" formControlName="content"></textarea>
+        <mat-error *ngIf="formUsr.controls.content.errors">
+          <span>
+            El content es obligatorio
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter a date</mat-label>
+        <input matInput matInput name="fecha" formControlName="fecha" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="formUsr.controls.fecha.errors">
+          <span>
+            La fecha es obligatoria
+          </span>
+        </mat-error>
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button color="primary" (click)="save()">
+        {{!edit ? 'Save' : 'Update'}}
+      </button>
+    </mat-card-footer>
+  </form>
+</mat-card>

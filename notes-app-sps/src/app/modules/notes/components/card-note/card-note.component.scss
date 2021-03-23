@@ -1,0 +1,26 @@
+.contenedorCardNotes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.cardNote{
+  width: 23%;
+  margin: 2px 7% 3% 0;
+}
+
+.cardHeader{
+  display: flex;
+}
+.separador {
+  flex: 1 1 auto;
+}
+.btnEdit{
+  background-color: #ccc;
+}
+.btnDelete{
+  margin-left: 8px;
+}
+mat-card-footer{
+  background-color: #ccc;
+}

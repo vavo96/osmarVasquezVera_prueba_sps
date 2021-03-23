@@ -1,0 +1,20 @@
+.contenedor{
+  display: flex;
+  margin: 3% 5% 0 5%;
+}
+.mat-form-field {
+  display: block;
+}
+.separador {
+  flex: 1 1 auto;
+}
+.cardUser{
+  width: 30%;
+  height: 150px;
+}
+mat-card-footer{
+  margin-left: 4px;
+}
+.listUsers{
+  width: 60%;
+}

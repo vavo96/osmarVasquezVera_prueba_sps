@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <span>NotesApp</span>
+
+  <span class="separador"></span>
+
+  <a mat-button [routerLink]="['/notes']" [routerLinkActive]="['active']">
+    <span>Notes</span>
+  </a>
+
+  <a mat-button [routerLink]="['/notes/create']" [routerLinkActive]="['active']">
+    <span>Create Note</span>
+  </a>
+
+  <a mat-button [routerLink]="['/users/create']" [routerLinkActive]="['active']">
+    <span>Create User</span>
+  </a>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
